@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="625.0" prefWidth="489.0" style="-fx-background-color: #777777;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jfreedesktop.FXMLjfreeDesktopController">
+   <children>
+      <Label layoutX="23.0" layoutY="38.0" prefHeight="15.0" prefWidth="72.0" text="Shortcuts" textFill="#dce800" />
+      <ListView fx:id="lvDesktop" layoutX="23.0" layoutY="61.0" onKeyReleased="#handleKPLVDeskTop" onMouseClicked="#handleLVDeskTop" pickOnBounds="false" prefHeight="145.0" prefWidth="452.0" style="-fx-border-width: 1; -fx-border-color: #000000;" />
+      <Button fx:id="btnAdd" layoutX="120.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleBtnAdd" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #DDEEFF; -fx-border-width: 1; -fx-border-color: #000000;" text="Add" />
+      <Button fx:id="btnDelete" disable="true" layoutX="289.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleBtnDelete" prefHeight="25.0" prefWidth="72.0" style="-fx-border-color: #000000; -fx-border-width: 1; -fx-background-color: #FFEEFF;" text="Delete" />
+      <VBox layoutX="22.0" layoutY="344.0" prefHeight="290.0" prefWidth="452.0">
+         <opaqueInsets>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </opaqueInsets>
+         <children>
+            <Label text="Shortcut Name" textFill="#dce800" />
+            <TextField fx:id="tfShortcutName" editable="false" />
+            <Label text="Type" textFill="#dce800" />
+            <TextField fx:id="tfType" editable="false" />
+            <Label text="Executable/URL" textFill="#dce800" />
+            <TextField fx:id="tfExec" editable="false" />
+            <Label text="Comment" textFill="#dce800" />
+            <TextField fx:id="tfComment" editable="false" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000080" height="115.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="115.0" />
+                        <ImageView fx:id="imgIcon" fitHeight="100.0" fitWidth="100.0" pickOnBounds="false" preserveRatio="false" smooth="false" />
+                     </children>
+                  </StackPane>
+                  <TextArea fx:id="taKeyWords" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="KeyWords" />
+                  <TextArea fx:id="taPermissions" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="Permissions">
+                     <font>
+                        <Font size="10.0" />
+                     </font></TextArea> 
+               </children>
+            </HBox>
+            <Label text="" />
+         </children>
+      </VBox>
+      <Button fx:id="btnQuit" layoutX="402.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleBtnQuit" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #00FFEE; -fx-border-color: #000000; -fx-border-width: 2;" text="Quit" />
+      <TextArea fx:id="taText" editable="false" layoutX="23.0" layoutY="206.0" prefHeight="137.0" prefWidth="452.0" style="-fx-border-color: #000000; -fx-border-width: 1;" wrapText="true">
+         <font>
+            <Font size="9.0" />
+         </font></TextArea>
+      <Button fx:id="btnLookup" defaultButton="true" disable="true" layoutX="193.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleBtnLookup" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #DDEEFF; -fx-border-width: 1; -fx-border-color: #000000;" text="Lookup" />
+      <Button fx:id="btnPath" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#handleBtnPath" prefHeight="15.0" prefWidth="84.0" style="-fx-background-color: #DDDD00; -fx-border-width: 1; -fx-border-color: #000000;" text="Path DeskTop">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
